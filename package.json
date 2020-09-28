@@ -1,0 +1,25 @@
+{
+  "name": "gateway-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "dependencies": {
+    "@apollo/gateway": "0.16.10",
+    "apollo-server": "2.9.7",
+    "concurrently": "5.3.0",
+    "graphql": "14.5.8",
+    "graphql-tag": "^2.10.1",
+    "node": "14.12.0"
+  },
+  "license": "ISC",
+  "scripts": {
+    "start": "concurrently -k npm:server:*",
+    "server:gateway": "nodemon src/index.js",
+    "server:remoteService": "nodemon src/RemoteService/index.js"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@types/graphql": "14.0.1",
+    "nodemon": "1.18.4"
+  }
+}
